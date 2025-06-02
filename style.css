@@ -39,10 +39,11 @@ header h1{
 .mercury{
   background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg);    
   background-size: cover;
+  background-position: center;
 }
 img{
   max-height: 100px;
-  max-width: auto;
+  max-width: 100%;
 }
 .planets>*{
   width: 100%;

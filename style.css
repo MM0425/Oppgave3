@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+title {
+  font-size: 0;
+}
+
+body {
+  background-image: url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
+}

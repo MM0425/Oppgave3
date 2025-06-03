@@ -24,7 +24,7 @@ header h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 150vh;
   overflow: hidden;
   border: 2px solid beige;
 }
@@ -68,7 +68,7 @@ img{
 }
 
 
-/* Legger inn et X-offsett på innholdet i planet-containerne,
+/* Legger inn et X-offset på innholdet i planet-containerne,
  sånn at de har en annen plassering når containeren er "inaktivt" */
 
 .planet_article>.planet_desc{

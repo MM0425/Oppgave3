@@ -1,5 +1,4 @@
 const planets = document.querySelectorAll(".planet_article");
-console.log(planets);
 
 function toggleOpen() {
   this.classList.toggle('open');

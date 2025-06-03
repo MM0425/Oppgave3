@@ -68,28 +68,28 @@ img{
 }
 
 .planet_article>.planet_desc{
-  transform: translateX(0%);
-
-}
-
-.planet_article>.planet_img{
-  transform: translateX(0%);
-}
-
-.planet_article.open-active>.planet_img {
-  transform: translateX(100%);
-}
-.planet_article.open-active>.planet_desc {
   transform: translateX(200%);
 
 }
 
-.planet_article>*:last-child{
+.planet_article>.planet_img{
+  transform: translateX(100%);
+}
+
+.planet_article.open-active>.planet_img {
   transform: translateX(0%);
+}
+.planet_article.open-active>.planet_desc {
+  transform: translateX(0%);
+
+}
+
+.planet_article>*:last-child{
+  transform: translateX(100%);
 }
 
 .planet_article.open-active>*:last-child {
-  transform: translateX(100%);
+  transform: translateX(0%);
 }
 
 .planet_article>*{

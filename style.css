@@ -48,7 +48,7 @@ header h1{
 }
 
 .planet_article.open {
-  flex-grow: 5;
+  flex-grow: 7;
   font-size: 20px;
 }
 .planet_article.open img {

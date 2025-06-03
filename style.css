@@ -78,6 +78,7 @@ img{
 
 .planet_article.open-active>.planet_img {
   transform: translateX(0%);
+  scale: 1.35;
 }
 .planet_article.open-active>.planet_desc {
   transform: translateX(0%);

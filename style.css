@@ -50,14 +50,14 @@ figcaption{
 .planet_img{
   flex-direction: column;
   display: flex;
-  gap: 12px;
+  gap: 23px;
 }
-img{
+img {
   height: 100px;
   width: 100px;
   object-fit: contain;
-  transition: transform 1s 
-  cubic-bezier(.45,.05,.55,.95);
+  transform: scale(1) translateX(0);
+  transition: transform 1s cubic-bezier(.45,.05,.55,.95);
 }
 .planets > * {
   width: 100%;  
@@ -93,35 +93,37 @@ img{
   flex: 1;
   justify-content: center;
   align-items: center;
-  transition: transform 1.5s;
+  transform: translateX(0) scale(1);
+  transition: transform 1s cubic-bezier(.45,.05,.55,.95);
 }
 .planet_article.open {
     flex-grow: 7;
     font-size: 20px;
 }
 .planet_article.open img {
-    transform: scale(1.35);
+    transform: scale(1.7) translateX(0);
   }
   
 
 /* Legger inn et X-offset på innholdet i planet-containerne,
-sånn at de har en annen plassering når containeren er "inaktivt" */
+sånn at de har en annen plassering når containeren er "inaktiv" */
 
 .planet_article > .planet_desc {
-  transform: translateX(200%);
+  transform: translateX(200%) scale(1);
 }
 
-.planet_article>.planet_img{
-  transform: translateX(90%);
+.planet_article > .planet_img {
+  transform: translateX(90%) scale(1);
 
 }
+
 .planet_article.open-active > .planet_img {
-  transform: translateX(0%);
-  scale: 1.35;
-  gap: 20px;
+  transform: translateX(0) scale(1.35);
+  gap: 30px;
 }
+
 .planet_article.open-active > .planet_desc {
-  transform: translateX(0%);
+  transform: translateX(0) scale(1);
 }
 .planet_article > *:last-child {
   transform: translateX(100%);

@@ -55,6 +55,11 @@ header h1 {
   background-position: center;
 }
 
+#saturn {
+  min-height: 120px;
+  min-width: 100%;
+}
+
 .planet_article.open {
   flex-grow: 7;
   font-size: 20px;

@@ -31,18 +31,23 @@ header h1 {
   align-items: center;
   min-height: 150vh;
   overflow: hidden;
-  border: 2px solid beige;
+
 }
 
 .planet_article {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 auto;
+  flex: 1;
   border: 1px solid white;
-  transition: font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-    flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-}
+
+  transition:
+      font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+      flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+      background 0.2s; 
+  padding: 10vh 0 10vh 0;
+  }
+
 
 .mercury {
   background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg);
@@ -57,14 +62,23 @@ header h1 {
 .planet_article.open img {
   transform: scale(1.15);
 }
-img {
-  max-height: 100px;
-  max-width: 100%;
+
+figcaption{
+  color: aliceblue;
+}
+.planet_img{
+  flex-direction: column;
+}
+img{
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
   transition: transform 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
 }
 .planets > * {
   width: 100%;
-  flex: 1 0 auto;
+  height: 100%;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +90,10 @@ img {
 .planet_article > .planet_desc {
   transform: translateX(200%);
 }
-.planet_article > .planet_img {
-  transform: translateX(100%);
+
+.planet_article>.planet_img{
+  transform: translateX(90%);
+
 }
 .planet_article.open-active > .planet_img {
   transform: translateX(0%);
@@ -99,7 +115,6 @@ img {
   justify-content: center;
   align-items: center;
   transition: transform 0.5s;
-}
-.planet_img {
-  flex-direction: column;
-}
+
+} 
+

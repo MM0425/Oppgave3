@@ -76,7 +76,6 @@ img{
 .planet_article {
   justify-content: space-between;
   align-items: center;
-  flex: 1;
   border: 1px solid white;
   min-height: 40vh;
   transition:

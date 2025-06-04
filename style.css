@@ -3,8 +3,16 @@
   padding: 0;
 
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 
   text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 title {
@@ -15,23 +23,47 @@ body {
   background-image: url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
 }
 
-header h1 {
+/* v Header */
+
+h1 {
+  min-height: 5svh;
+
   margin: 10px;
   padding: 20px;
-  font-size: 20px;
-  min-height: 5vh;
-  color: wheat;
+  border-radius: 10px;
+
+  font-size: 2em;
+
+  color: #a2c99f;
   background-color: #892be260;
 }
 
+/* v Main */
+
+main {
+  flex-direction: row;
+}
+
+/* v >aside */
+
+#side-nav {
+  margin: 10px;
+
+  background-color: #1c1d1cab;
+}
+
+/* < */
+
 .planets {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  min-height: 150vh;
+
+  margin: 10px;
+
   justify-content: center;
   align-items: center;
-  min-height: 150vh;
-  overflow: hidden;
 
+  overflow: hidden;
 }
 
 .planet_article {
@@ -41,13 +73,10 @@ header h1 {
   flex: 1;
   border: 1px solid white;
 
-  transition:
-      font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-      flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-      background 0.2s; 
+  transition: font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
   padding: 10vh 0 10vh 0;
-  }
-
+}
 
 .mercury {
   background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg);
@@ -59,22 +88,26 @@ header h1 {
   flex-grow: 7;
   font-size: 20px;
 }
+
 .planet_article.open img {
   transform: scale(1.15);
 }
 
-figcaption{
-  color: aliceblue;
+figcaption {
+  color: #f0f8ff;
 }
-.planet_img{
+
+.planet_img {
   flex-direction: column;
 }
-img{
+
+img {
   height: 100px;
   width: 100px;
   object-fit: contain;
   transition: transform 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
 }
+
 .planets > * {
   width: 100%;
   height: 100%;
@@ -91,20 +124,23 @@ img{
   transform: translateX(200%);
 }
 
-.planet_article>.planet_img{
+.planet_article > .planet_img {
   transform: translateX(90%);
-
 }
+
 .planet_article.open-active > .planet_img {
   transform: translateX(0%);
   scale: 1.35;
 }
+
 .planet_article.open-active > .planet_desc {
   transform: translateX(0%);
 }
+
 .planet_article > *:last-child {
   transform: translateX(100%);
 }
+
 .planet_article.open-active > *:last-child {
   transform: translateX(0%);
 }
@@ -115,6 +151,12 @@ img{
   justify-content: center;
   align-items: center;
   transition: transform 0.5s;
+}
 
-} 
+/* v Footer */
 
+footer {
+  width: 100svw;
+  height: 10svh;
+  background-color: #a2c99f3f;
+}

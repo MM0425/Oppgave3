@@ -1,7 +1,8 @@
-const planets = document.querySelectorAll(".planet_article");
+const planetImages = document.querySelectorAll(".planet_img img");
 
-function toggleOpen() {
-  this.classList.toggle('open');
+function toggleOpen(e) {
+  e.stopPropagation(); 
+  this.closest('.planet_article').classList.toggle('open');
 }
 
 function toggleActive(e) {
@@ -10,5 +11,7 @@ function toggleActive(e) {
   }
 }
 
-planets.forEach(planet => planet.addEventListener('click', toggleOpen));
-planets.forEach(planet => planet.addEventListener('transitionend', toggleActive));
+planetImages.forEach(img => img.addEventListener('click', toggleOpen));
+document.querySelectorAll('.planet_article').forEach(planet => 
+  planet.addEventListener('transitionend', toggleActive)
+);

@@ -138,6 +138,7 @@ sånn at de har en annen plassering når containeren er "inaktiv" */
   transform: translateX(0%);
 }
 
+/*  la inn avstand til toppen basert på planetenes avstand til solen */
 /* Mercury: 0.4 AU */
 .planet_article:nth-child(1) {
   margin-top: 4vh;

@@ -70,23 +70,24 @@ img {
 .planets {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 150vh;
+  padding-top: 5vh; /* Space for the "sun" */
+  justify-content: center;
   overflow: hidden;
-
+  min-height: 800vh; /* Increased to fit all planets with their spacing */
+  overflow-y: auto; /* Allow scrolling */
 }
 
 
 .planet_article {
   justify-content: space-between;
   align-items: stretch;
-  border: 1px solid white;
   min-height: 40vh;
   transition:
       font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
       flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
       background 0.2s;
+  padding: 4vh 0vh 2vh 2vh;
   }
 .planet_article > * {
   display: flex;
@@ -135,4 +136,44 @@ sånn at de har en annen plassering når containeren er "inaktiv" */
 }
 .planet_article.open-active > *:last-child {
   transform: translateX(0%);
+}
+
+/* Mercury: 0.4 AU */
+.planet_article:nth-child(1) {
+  margin-top: 4vh;
+}
+
+/* Venus: 0.7 AU */
+.planet_article:nth-child(2) {
+  margin-top: 7vh;
+}
+
+/* Earth: 1 AU */
+.planet_article:nth-child(3) {
+  margin-top: 10vh;
+}
+
+/* Mars: 1.5 AU */
+.planet_article:nth-child(4) {
+  margin-top: 15vh;
+}
+
+/* Jupiter: 5.2 AU */
+.planet_article:nth-child(5) {
+  margin-top: 52vh;
+}
+
+/* Saturn: 9.5 AU */
+.planet_article:nth-child(6) {
+  margin-top: 95vh;
+}
+
+/* Uranus: 19.2 AU */
+.planet_article:nth-child(7) {
+  margin-top: 192vh;
+}
+
+/* Neptune: 30.1 AU */
+.planet_article:nth-child(8) {
+  margin-top: 301vh;
 }

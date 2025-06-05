@@ -71,11 +71,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5vh; /* Space for the "sun" */
+  padding-top: 5vh;
   justify-content: center;
   overflow: hidden;
-  min-height: 800vh; /* Increased to fit all planets with their spacing */
-  overflow-y: auto; /* Allow scrolling */
+  min-height: 800vh; 
+  overflow-y: auto; 
 }
 
 

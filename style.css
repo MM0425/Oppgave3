@@ -1,180 +1,172 @@
+/* Reset and Base Styles */
 * {
-  margin: 0;
-  padding: 0;
-
-  box-sizing: border-box;
-
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-
+/* Document Level */
 title {
-  font-size: 0;
+    font-size: 0;
 }
 
 body {
-  background-image: url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
+    background-image: url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
 }
 
-.maria, .marius{
-  border-radius: 50%;
-  max-width: 50px;
-  max-height: 50px;
-  align-self: flex-start;
-}
+/* Header */
 header h1 {
-  margin: 10px;
-  padding: 20px;
-  font-size: 20px;
-  min-height: 5vh;
-  color: wheat;
-  background-color: #892be260;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    min-height: 5vh;
+    color: wheat;
+    background-color: #892be260;
 }
 
+/* Main Content - Planets Section */
+.planets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 800vh;
+    overflow-y: auto;
+}
 
+.planets > * {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Planet Articles */
+.planet_article {
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 40vh;
+    transition:
+        font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        background 0.2s;
+    padding: 4vh 0vh 2vh 2vh;
+}
+
+.planet_article > * {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0) scale(1);
+    transition: transform 1s cubic-bezier(.45,.05,.55,.95);
+}
+
+/* Planet Images and Captions */
+.planet_img {
+    flex-direction: column;
+    display: flex;
+    gap: 23px;
+}
+
+figcaption {
+    color: aliceblue;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    transform: scale(1) translateX(0);
+    transition: transform 1s cubic-bezier(.45,.05,.55,.95);
+}
+
+/* Specific Planet Styles */
 .mercury {
-  background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
+    background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 #saturn {
-  min-height: 120px;
-  min-width: 100%;
+    min-height: 120px;
+    min-width: 100%;
 }
 
-figcaption{
-  color: aliceblue;
-}
-.planet_img{
-  flex-direction: column;
-  display: flex;
-  gap: 23px;
-}
-img {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
-  transform: scale(1) translateX(0);
-  transition: transform 1s cubic-bezier(.45,.05,.55,.95);
-}
-.planets > * {
-  width: 100%;  
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Planet Description */
+.planet_article > .planet_desc {
+    transform: translateX(200%) scale(1);
 }
 
-.planets {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 5vh;
-  justify-content: center;
-  overflow: hidden;
-  min-height: 800vh; 
-  overflow-y: auto; 
+/* Rating Section */
+.maria, .marius {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+    align-self: flex-start;
 }
 
-
-.planet_article {
-  justify-content: space-between;
-  align-items: stretch;
-  min-height: 40vh;
-  transition:
-      font-size 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-      flex 1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-      background 0.2s;
-  padding: 4vh 0vh 2vh 2vh;
-  }
-.planet_article > * {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(0) scale(1);
-  transition: transform 1s cubic-bezier(.45,.05,.55,.95);
-}
+/* Interactive States */
 .planet_article.open {
     flex-grow: 7;
     font-size: 20px;
 }
+
 .planet_article.open img {
     transform: scale(1.7) translateX(0);
-  }
-  
-
-/* Legger inn et X-offset på innholdet i planet-containerne,
-sånn at de har en annen plassering når containeren er "inaktiv" */
-
-.planet_article > .planet_desc {
-  transform: translateX(200%) scale(1);
 }
 
 .planet_article > .planet_img {
-  transform: translateX(90%) scale(1);
-
+    transform: translateX(90%) scale(1);
 }
-.planet_article>.planet_img > img:hover {
-  transform: scale(1.3);
-  cursor: pointer;
 
+.planet_article > .planet_img > img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 .planet_article.open-active > .planet_img {
-  transform: translateX(0) scale(1.35);
-  gap: 30px;
+    transform: translateX(0) scale(1.35);
+    gap: 30px;
 }
 
 .planet_article.open-active > .planet_desc {
-  transform: translateX(0) scale(1);
-}
-.planet_article > *:last-child {
-  transform: translateX(100%);
-}
-.planet_article.open-active > *:last-child {
-  transform: translateX(0%);
+    transform: translateX(0) scale(1);
 }
 
-/*  la inn avstand til toppen basert på planetenes avstand til solen */
-/* Mercury: 0.4 AU */
-.planet_article:nth-child(1) {
-  margin-top: 4vh;
+.planet_article > *:last-child {
+    transform: translateX(100%);
 }
+
+.planet_article.open-active > *:last-child {
+    transform: translateX(0%);
+}
+
+/* Planet Spacing (Solar System Scale) */
+/* Mercury: 0.4 AU */
+.planet_article:nth-child(1) { margin-top: 4vh; }
 
 /* Venus: 0.7 AU */
-.planet_article:nth-child(2) {
-  margin-top: 7vh;
-}
+.planet_article:nth-child(2) { margin-top: 7vh; }
 
 /* Earth: 1 AU */
-.planet_article:nth-child(3) {
-  margin-top: 10vh;
-}
+.planet_article:nth-child(3) { margin-top: 10vh; }
 
 /* Mars: 1.5 AU */
-.planet_article:nth-child(4) {
-  margin-top: 15vh;
-}
+.planet_article:nth-child(4) { margin-top: 15vh; }
 
 /* Jupiter: 5.2 AU */
-.planet_article:nth-child(5) {
-  margin-top: 52vh;
-}
+.planet_article:nth-child(5) { margin-top: 52vh; }
 
 /* Saturn: 9.5 AU */
-.planet_article:nth-child(6) {
-  margin-top: 95vh;
-}
+.planet_article:nth-child(6) { margin-top: 95vh; }
 
 /* Uranus: 19.2 AU */
-.planet_article:nth-child(7) {
-  margin-top: 192vh;
-}
+.planet_article:nth-child(7) { margin-top: 192vh; }
 
 /* Neptune: 30.1 AU */
-.planet_article:nth-child(8) {
-  margin-top: 301vh;
-}
+.planet_article:nth-child(8) { margin-top: 301vh; }

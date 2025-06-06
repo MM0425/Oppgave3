@@ -67,20 +67,17 @@ header h1 {
 }
 .planets {
     flex: 1;
-    /* Take remaining space */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 5vh;
-    justify-content: center;
-    overflow: hidden;
-    min-height: 800vh;
+    justify-content: flex-start;
     overflow-y: auto;
 }
 
-.planets>* {
+.planets > * {
     width: 100%;
-    flex: 1;
+    flex: 0 0 auto; /* Changed from flex: 1 - don't grow or shrink, use auto basis */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,47 +225,6 @@ img {
     transform: translateX(0%);
 }
 
-/* Planet Spacing by AU */
-.planet_article:nth-child(1) {
-    margin-top: 4vh;
-}
-
-/* Mercury: 0.4 AU */
-.planet_article:nth-child(2) {
-    margin-top: 7vh;
-}
-
-/* Venus: 0.7 AU */
-.planet_article:nth-child(3) {
-    margin-top: 10vh;
-}
-
-/* Earth: 1 AU */
-.planet_article:nth-child(4) {
-    margin-top: 15vh;
-}
-
-/* Mars: 1.5 AU */
-.planet_article:nth-child(5) {
-    margin-top: 52vh;
-}
-
-/* Jupiter: 5.2 AU */
-.planet_article:nth-child(6) {
-    margin-top: 95vh;
-}
-
-/* Saturn: 9.5 AU */
-.planet_article:nth-child(7) {
-    margin-top: 192vh;
-}
-
-/* Uranus: 19.2 AU */
-.planet_article:nth-child(8) {
-    margin-top: 301vh;
-}
-
-/* Neptune: 30.1 AU */
 
 /* Footer */
 footer {

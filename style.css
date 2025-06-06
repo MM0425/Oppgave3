@@ -77,7 +77,7 @@ header h1 {
 
 .planets > * {
     width: 100%;
-    flex: 0 0 auto; /* Changed from flex: 1 - don't grow or shrink, use auto basis */
+    flex: 0 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +237,7 @@ footer {
 .rating {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;  /* Changed from center to flex-start */
+    align-items: center;
     gap: 2rem;
     padding: 1.5rem;
     color: #e0f0ff;
@@ -250,15 +250,14 @@ footer {
     align-items: center;
     gap: 0.8rem;
     max-width: 200px;
-    height: 100%;  /* Added to ensure consistent height */
+    height: 100%; 
 }
-
 .reviewer img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 2px solid #7cb9e8;
-    margin-top: 0;  /* Added to ensure consistent top spacing */
+    margin-top: 0; 
 }
 
 .reviewer-score {

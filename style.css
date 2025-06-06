@@ -116,7 +116,10 @@ header h1 {
 }
 
 figcaption {
-    color: aliceblue;
+    color: #ffffff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    font-size: 1.2em;
+    font-family: 'Orbitron', sans-serif;
 }
 
 img {
@@ -151,7 +154,7 @@ img {
     font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.6;
-    color: #e0e7ff;
+    color: #c8e6ff;
     padding: 1rem;
 }
 
@@ -159,6 +162,9 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 1.5rem;
 }
 
 .planet_desc ul {
@@ -178,7 +184,7 @@ img {
     content: "★";
     position: absolute;
     left: 0;
-    color: #a2c99f;
+    color: #7cb9e8;
 }
 
 /* Ratings */

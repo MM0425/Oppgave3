@@ -134,7 +134,7 @@ img {
 
 /* Specific Planet Backgrounds */
 .mercury {
-    background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg);
+    /* background-image: url(./images/nasa--hI5dX2ObAs-unsplash.jpg); */
     background-size: cover;
     background-position: center;
 }

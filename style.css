@@ -146,8 +146,39 @@ img {
 }
 
 /* Planet Description */
-.planet_article>.planet_desc {
+.planet_article > .planet_desc {
     transform: translateX(200%) scale(1);
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    color: #e0e7ff;
+    padding: 1rem;
+}
+
+.planet_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.planet_desc ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.planet_desc li {
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.planet_desc li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #a2c99f;
 }
 
 /* Ratings */

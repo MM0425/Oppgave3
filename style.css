@@ -219,11 +219,12 @@ img {
     transform: translateX(0) scale(1);
 }
 
-.planet_article>*:last-child {
+.planet_article > *:last-child {
     transform: translateX(100%);
+    transition: transform 1s cubic-bezier(.45, .05, .55, .95);
 }
 
-.planet_article.open-active>*:last-child {
+.planet_article.open-active > *:last-child {
     transform: translateX(0%);
 }
 
@@ -274,4 +275,43 @@ footer {
     width: 100svw;
     height: 10svh;
     background-color: #a2c99f3f;
+}
+
+/* Rating Section */
+.rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;  /* Changed from center to flex-start */
+    gap: 2rem;
+    padding: 1.5rem;
+    color: #e0f0ff;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.reviewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 200px;
+    height: 100%;  /* Added to ensure consistent height */
+}
+
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #7cb9e8;
+    margin-top: 0;  /* Added to ensure consistent top spacing */
+}
+
+.reviewer-score {
+    font-size: 1.2em;
+    color: #a2c99f;
+}
+
+.reviewer-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+    text-align: center;
 }

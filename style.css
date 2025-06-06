@@ -25,12 +25,16 @@ body {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+@font-face {
+    font-family: Codystar;
+    src: url(./Codystar-Regular.ttf);
+    font-weight: normal; }
 
 /* Header */
 header h1 {
+    font: 400 2em Codystar;
     margin: 10px;
     padding: 20px;
-    font-size: 2em;
     min-height: 5svh;
     color: #a2c99f;
     background-color: #892be260;

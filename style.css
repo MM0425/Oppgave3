@@ -14,6 +14,7 @@ html {
 main {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 title {
@@ -24,6 +25,7 @@ body {
   background-image: url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -81,6 +83,7 @@ li {
   padding-top: 5vh;
   justify-content: flex-start;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .planets > * {

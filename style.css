@@ -240,9 +240,18 @@ img {
 
 /* Footer */
 footer {
-  width: 100svw;
-  height: 10svh;
-  background-color: #a2c99f3f;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #1c1d1cab;
+  color: #e0f0ff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* Rating Section */

@@ -32,33 +32,50 @@ body {
 
 @font-face {
   font-family: Codystar;
-  src: url(./Codystar-Regular.ttf);
+  src: url(./fonts/Codystar-Regular.ttf);
   font-weight: normal;
 }
 
 header h1 {
   margin: 10px;
-  padding: 20px;
+  padding: 10svh 3svw;
   min-height: 5svh;
   border-radius: 10px;
 
-  font: 500 2em Codystar;
-  text-shadow: 2px 2px 5px rgb(152, 236, 103);
+  font: 500 2.5em Codystar;
+  text-shadow: 2px 2px 5px #98ec67;
   letter-spacing: 20px;
 
   color: #e7ece6;
   background-image: linear-gradient(to right, #4d187ee7, #6756771a);
 }
 
+h1:hover {
+  font-weight: 600;
+  text-shadow: 2px 2px #674d801a;
+
+  color: #9bb38d;
+  background-image: linear-gradient(to right, #59228be7, #674d801a);
+}
+
 /* Top Nav-bar */
 #top-nav {
+  width: 100svw;
   background-color: #1c1d1cab;
-  align-items: center;
 }
 
 #top-nav > ul {
   display: flex;
   flex-direction: row;
+
+  padding: 0 3svw;
+  justify-content: space-between;
+}
+
+@font-face {
+  font-family: Megrim;
+  src: url(./fonts/Megrim-Regular.ttf);
+  font-weight: normal;
 }
 
 .top-nav_btn {
@@ -67,8 +84,13 @@ header h1 {
   padding: 5px 10px;
 
   letter-spacing: 2px;
+  font: 300 1.5em Megrim;
 
   color: #7cb9e8;
+}
+
+.top-nav_btn:hover {
+  color: #1990eb;
 }
 
 li {
@@ -241,9 +263,9 @@ img {
 /* Footer */
 footer {
   width: 100%;
-  padding: 1rem;
+  padding: 5svh 0;
   text-align: center;
-  background-color: #1c1d1cab;
+  background-color: #1c1d1cce;
   color: #e0f0ff;
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.9em;
@@ -252,6 +274,7 @@ footer {
 footer p {
   margin: 0;
   line-height: 1.4;
+  letter-spacing: 1px;
 }
 
 /* Rating Section */

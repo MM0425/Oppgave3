@@ -13,12 +13,7 @@ html {
 
 main {
   display: flex;
-  flex-direction: row;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 title {
@@ -56,6 +51,7 @@ header h1 {
 /* Top Nav-bar */
 #top-nav {
   background-color: #1c1d1cab;
+  align-items: center;
 }
 
 #top-nav > ul {
@@ -66,7 +62,9 @@ header h1 {
 .top-nav_btn {
   width: fit-content;
   height: auto;
-  padding: 2px 10px;
+  padding: 5px 10px;
+
+  letter-spacing: 2px;
 
   color: #7cb9e8;
 }
@@ -75,14 +73,6 @@ li {
   list-style: none;
 }
 
-#side-nav {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  margin: 10px;
-  background-color: #1c1d1cab;
-  flex: 0 0 auto;
-}
 .planets {
   flex: 1;
   display: flex;
